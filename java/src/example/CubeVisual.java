@@ -31,7 +31,7 @@ public class CubeVisual extends Visual
     public void setup()
     {
         colorMode(HSB);
-        noCursor();
+        //noCursor();
         
         setFrameSize(256);
 
