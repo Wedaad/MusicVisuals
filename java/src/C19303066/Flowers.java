@@ -1,79 +1,58 @@
 package C19303066;
+import processing.core.*;
 
-import ie.tudublin.Visual;
 
-public class Flowers extends Visual {
+public class Flowers {
 
-    // float x = 20;
-    // float y = 50;
+    WedaadsVisual wv;
+
+    public Flowers(WedaadsVisual wv)
+    {
+        this.wv = wv;
+    
+    }
+
     float flowerSize = 20;
     float petalNo = 9;
-
-    public void settings() {
-
-        size(800, 800, P3D);
-
-    }
-    
-    public void keyPressed() {
-
-        if (key == ' ')
-        {
-            //playing the music when the space bar is hit
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
-            
-        }
-
-    }
-
-    public void setup() {
-
-        colorMode(HSB);
-        startMinim();
-        loadAudio("TheBeach.mp3");
-    
-    }
 
     float angle = 0;
     float rotation;
 
-    public void drawFlower() { // drawing the flower
+    public void render() { // drawing the flower
         
-        background(0);
-        calculateAverageAmplitude();
-        stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        strokeWeight(flowerSize);
-        noFill();
-        translate(400, 400, 0);  
+        wv.colorMode(PApplet.HSB);
+        wv.background(0);
+        wv.calculateAverageAmplitude();
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.strokeWeight(flowerSize);
+        wv.noFill();
+        wv.translate(400, 400, 0);
+        wv.rotateZ(PApplet.PI / 8);
+        
 
         for(int i = 0; i < petalNo; i++) {
 
-            rotate(TWO_PI / petalNo);
-            line(0, 0, 3 * flowerSize, 0);
+            wv.rotate(PApplet.TWO_PI / petalNo);
+            wv.line(0, 0, 50 + wv.lerpedAverage * (10 * flowerSize), 0);
+
 
         }
+    
+        wv.stroke(0);
+        wv.strokeWeight(8);
+        wv.ellipse(0, 0, (float) 1.5 * flowerSize, (float) 1.5 * flowerSize);
 
-        stroke(0);
-        strokeWeight(8);
-        ellipse(0, 0, (float) 1.5 * flowerSize, (float) 1.5 * flowerSize);
-
-        pushMatrix();
-        translate(0, 0, -200);
-        noFill();  
-        rotateX(angle);
-        rotateZ(angle);
-        popMatrix();
-        angle += 0.01f;
+        // wv.pushMatrix();
+        // wv.translate(0, 0, -200);
+        // wv.rotateX(angle);
+        // wv.rotateZ(angle);
+        // wv.rotateZ(PApplet.PI / 8);
+        // wv.popMatrix();
+        // angle += 0.01f;
 
     }
 
     
 
-    public void draw() { 
-
-        drawFlower();
-    
-    }  
     
 }
