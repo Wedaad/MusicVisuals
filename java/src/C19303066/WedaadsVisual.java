@@ -7,6 +7,7 @@ public class WedaadsVisual extends Visual {
 
     float[] lerpedBuffer;
     Flowers flowers;
+    Circle circle;
 
     public void settings()
     {
@@ -20,6 +21,7 @@ public class WedaadsVisual extends Visual {
     }
 
     float y = 200;
+    float halfHeight = height / 2;
     float lerpedY = y;
 
     public void setup()
@@ -34,10 +36,13 @@ public class WedaadsVisual extends Visual {
         //startListening(); 
         
         flowers = new Flowers(this);
+        circle = new Circle(this);
         lerpedBuffer = new float[width];
 
     
     }
+
+    int visualNo = 0;
 
     public void keyPressed()
     {
@@ -46,9 +51,14 @@ public class WedaadsVisual extends Visual {
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
+        if (keyCode >= '0' && keyCode <= '4' )
+        {
+            visualNo = keyCode - '0';
+        }
     }
 
     float lerpedAverage = 0;
+    public float average;
 
     public void draw()
     {
@@ -80,7 +90,27 @@ public class WedaadsVisual extends Visual {
 
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
-        flowers.render();
+        
+        switch (visualNo) {
+
+            case 0: { //flowers
+
+                flowers.render();
+                break;
+            }//ends case 0
+
+            case 1: {
+
+
+                circle.render();
+                //flowers.render();
+                break;
+            }//ends case 1 
+
+        }//ends switch
+        
+        
+        
 
     }
     

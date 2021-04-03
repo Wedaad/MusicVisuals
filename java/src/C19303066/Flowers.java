@@ -19,7 +19,7 @@ public class Flowers {
     float rotation;
 
     public void render() { // drawing the flower
-        
+
         wv.colorMode(PApplet.HSB);
         wv.background(0);
         wv.calculateAverageAmplitude();
@@ -41,14 +41,6 @@ public class Flowers {
         wv.stroke(0);
         wv.strokeWeight(8);
         wv.ellipse(0, 0, (float) 1.5 * flowerSize, (float) 1.5 * flowerSize);
-
-        // wv.pushMatrix();
-        // wv.translate(0, 0, -200);
-        // wv.rotateX(angle);
-        // wv.rotateZ(angle);
-        // wv.rotateZ(PApplet.PI / 8);
-        // wv.popMatrix();
-        // angle += 0.01f;
 
     }
 
