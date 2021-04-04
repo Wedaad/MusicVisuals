@@ -30,12 +30,12 @@ public class Circle {
         angle += 0.01f;
 
         //outer second circle spinning atm
-        wv.pushMatrix();
-        wv.translate(wv.width, wv.height, -950);
-        wv.rotateZ(angle);
-        wv.ellipse(wv.width / 2, wv.height / 2, 200 + (wv.lerpedAverage * 100), 200 + (wv.lerpedAverage * 100)); 
-        wv.popMatrix();
-        angle += 0.01f;
+        // wv.pushMatrix();
+        // wv.translate(wv.width, wv.height, -950);
+        // wv.rotateZ(angle);
+        // wv.ellipse(wv.width / 2, wv.height / 2, 200 + (wv.lerpedAverage * 100), 200 + (wv.lerpedAverage * 100)); 
+        // wv.popMatrix();
+        // angle += 0.01f;
  
     }//ends render
     

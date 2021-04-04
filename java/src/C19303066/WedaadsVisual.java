@@ -8,6 +8,7 @@ public class WedaadsVisual extends Visual {
     float[] lerpedBuffer;
     Flowers flowers;
     Circle circle;
+    Sphere sphere;
 
     public void settings()
     {
@@ -29,7 +30,7 @@ public class WedaadsVisual extends Visual {
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("TheBeach.mp3");
+        loadAudio("BadLiar.mp3");
  
 
         // Call this instead to read audio from the microphone
@@ -37,6 +38,7 @@ public class WedaadsVisual extends Visual {
         
         flowers = new Flowers(this);
         circle = new Circle(this);
+        sphere = new Sphere(this);
         lerpedBuffer = new float[width];
 
     
@@ -106,6 +108,20 @@ public class WedaadsVisual extends Visual {
                 //flowers.render();
                 break;
             }//ends case 1 
+
+            case 2: {
+
+                sphere.render();
+                break;
+
+            }//ends case 2
+
+            case 3: {
+                
+                circle.render();
+                sphere.render();
+                break;
+            }
 
         }//ends switch
         
