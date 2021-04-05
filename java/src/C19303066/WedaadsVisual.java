@@ -9,6 +9,8 @@ public class WedaadsVisual extends Visual {
     Flowers flowers;
     Circle circle;
     Sphere sphere;
+    SprialSphere ssphere;
+    SplitVisual sVisual;
 
     public void settings()
     {
@@ -39,6 +41,8 @@ public class WedaadsVisual extends Visual {
         flowers = new Flowers(this);
         circle = new Circle(this);
         sphere = new Sphere(this);
+        ssphere = new SprialSphere(this);
+        sVisual = new SplitVisual(this);
         lerpedBuffer = new float[width];
 
     
@@ -50,10 +54,10 @@ public class WedaadsVisual extends Visual {
     {
         if (key == ' ')
         {
-            getAudioPlayer().cue(0);
+            getAudioPlayer().cue(0); //same as rewind - goes back to start 
             getAudioPlayer().play();
         }
-        if (keyCode >= '0' && keyCode <= '4' )
+        if (keyCode >= '0' && keyCode <= '5' )
         {
             visualNo = keyCode - '0';
         }
@@ -93,7 +97,7 @@ public class WedaadsVisual extends Visual {
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
         
-        switch (visualNo) {
+        switch (visualNo) { //REMOVE BREAK OR REMOVE SWITCH ALL TOGETHER - IF KEY BLAH BLAH
 
             case 0: { //flowers
 
@@ -116,10 +120,23 @@ public class WedaadsVisual extends Visual {
 
             }//ends case 2
 
-            case 3: {
+            case 3: { // doesnt work
                 
                 circle.render();
                 sphere.render();
+                break;
+            }
+
+            case 4: {
+
+                circle.render();
+                ssphere.render();
+                break;
+            }
+            
+            case 5: {
+
+                sVisual.render();
                 break;
             }
 
