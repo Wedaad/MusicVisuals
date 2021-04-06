@@ -108,8 +108,8 @@ public class WedaadsVisual extends Visual {
             case 1: {
 
 
+                // flowers.render();
                 circle.render();
-                //flowers.render();
                 break;
             }//ends case 1 
 
