@@ -113,7 +113,6 @@ public class Flowers {
     public void render() { // drawing the flower
 
         wv.pushMatrix();
-        wv.colorMode(PApplet.HSB);
         wv.background(0);
         wv.calculateAverageAmplitude();
         wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);

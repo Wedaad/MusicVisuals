@@ -30,7 +30,7 @@ public class WedaadsVisual extends Visual {
     public void setup()
     {
         startMinim();
-                
+        colorMode(HSB);
         // Call loadAudio to load an audio file to process 
         loadAudio("BadLiar.mp3");
  
@@ -101,15 +101,16 @@ public class WedaadsVisual extends Visual {
 
             case 0: { //flowers
 
-                flowers.render();
+                //flowers.render();
+                circle.render();
                 break;
             }//ends case 0
 
             case 1: {
 
 
-                // flowers.render();
-                circle.render();
+                flowers.render();
+                //circle.render();
                 break;
             }//ends case 1 
 
@@ -120,7 +121,7 @@ public class WedaadsVisual extends Visual {
 
             }//ends case 2
 
-            case 3: { // doesnt work
+            case 3: { 
                 
                 circle.render();
                 sphere.render();
