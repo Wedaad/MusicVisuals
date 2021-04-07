@@ -15,18 +15,8 @@ public class SplitVisual {
 
         float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
         wv.stroke(c, 255, 255);        
-        wv.strokeWeight(1);
         wv.noFill();
-
-        wv.pushMatrix();
-        wv.translate(170, 405, -100);
-        wv.rotateX(angle);
-        wv.rotateY(angle);
-        wv.noFill();
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        wv.sphere(25 + (200 * wv.lerpedAverage));
-        wv.popMatrix();
-        angle += 0.03f;
+        wv.strokeWeight(3);
 
         wv.ellipse((wv.width / 2) - 200, wv.height / 2, 250 + (wv.lerpedAverage * 300), 250 + (wv.lerpedAverage * 300)); 
         wv.ellipse((wv.width / 2) - 200, wv.height / 2, 150 + (wv.lerpedAverage * 300), 150 + (wv.lerpedAverage * 300)); 
@@ -36,10 +26,22 @@ public class SplitVisual {
         wv.ellipse((wv.width / 2) + 200, wv.height / 2, 150 + (wv.lerpedAverage * 300), 150 + (wv.lerpedAverage * 300)); 
 
         wv.pushMatrix();
+        wv.translate(170, 405, -100);
+        wv.rotateX(angle);
+        wv.rotateY(angle);
+        wv.noFill();
+        wv.strokeWeight(1);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.sphere(25 + (200 * wv.lerpedAverage));
+        wv.popMatrix();
+        angle += 0.03f;
+
+        wv.pushMatrix();
         wv.translate(630, 405, -100);
         wv.rotateX(angle);
         wv.rotateY(angle);
         wv.noFill();
+        wv.strokeWeight(1);
         wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         wv.sphere(25 + (200 * wv.lerpedAverage));
         wv.popMatrix();

@@ -43,6 +43,7 @@ public class WedaadsVisual extends Visual {
         sphere = new Sphere(this);
         ssphere = new SprialSphere(this);
         sVisual = new SplitVisual(this);
+        
         lerpedBuffer = new float[width];
 
     
@@ -102,6 +103,8 @@ public class WedaadsVisual extends Visual {
             case 0: { //flowers
 
                 flowers.render();
+                //flowers.moveFlower();
+                flowers.updatePosition();
                 break;
             }//ends case 0
 

@@ -1,7 +1,6 @@
 package ie.tudublin;
 
 import example.CubeVisual;
-import C19303066.RotatatingCube;
 import C19303066.WedaadsVisual;
 import C19303066.Flowers;
 import example.CubeVisual1;

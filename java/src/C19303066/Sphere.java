@@ -17,7 +17,7 @@ public class Sphere {
         wv.lights();
         wv.translate(400, 400, -200);
         wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        //wv.noStroke();
+        wv.strokeWeight(1);
         float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
         wv.fill(c, 255, 255);
         wv.sphere(160 + (400 * wv.lerpedAverage));

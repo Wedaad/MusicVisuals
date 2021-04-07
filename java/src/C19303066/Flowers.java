@@ -9,7 +9,7 @@ public class Flowers {
     public Flowers(WedaadsVisual wv)
     {
         this.wv = wv;
-        //moveFlower();
+        moveFlower();
     
     }
 
@@ -20,95 +20,22 @@ public class Flowers {
     float rotation;
 
     //trying to move the flower around
-    // float x, y;
-    // float dx, dy;
-    // float w = 50;
-    // float halfW = w /2;
+    float x = 0;
+    float y = 0;
+    float dx = 0;
+    float dy = 5;
+    float w = 50;
+    float halfW = w / 2;
 
-    // public void moveFlower() {
+    public void moveFlower() {
 
-    //     int randomNo = (int) wv.random(4); //generating random numbers from 0 to 4
+        //rotating and increasing the size of the flower
+        x = wv.random(0, 1);
+        y = - halfW;
+        dx = wv.random(-1, 1);
+        dy = wv.random(1, 1);
 
-    //     System.out.println("RandomNo: " + randomNo);
-    //     switch (randomNo) {
-
-    //         case 0: { //flower comes in from the bottom of the screen
-
-    //             x = wv.random(halfW, wv.height - halfW);
-    //             y = wv.height + halfW;
-    //             dx = wv.random(1, 4);
-    //             dy = wv.random(-1, 1);
-    //             break;
-    
-    //         }
-    //         case 1: { //flower comes in from the top of the screen
-    
-    //             x = wv.random(halfW, wv.width - halfW);
-    //             y = - halfW;;
-    //             dx = wv.random(-1, 1);
-    //             dy = wv.random(1, 4);
-    //             break;
-    
-    //         }
-    //         case 2: { //flower comes in from the right of the screen
-    
-    //             x = wv.width + halfW;
-    //             y =  wv.random(halfW, wv.height - halfW);
-    //             dx =  wv.random(1, 4);
-    //             dy =  wv.random(-1, 1);
-    //             break;
-    //         }
-    //         case 3: { //flower comes in from the left of the screen
-    
-    //             x = - halfW;
-    //             y = wv.random(halfW, wv.height - halfW);
-    //             dx = wv.random(1, 4);
-    //             dy = wv.random(-1, 1);
-    //             break;
-    //         }
-
-
-
-
-
-
-    //     }
-        // if (randomNo == 0) { //flower comes in from the bottom of the screen
-
-        //     x = wv.random(halfW, wv.height - halfW);
-        //     y = wv.height + halfW;
-        //     dx = wv.random(1, 4);
-        //     dy = wv.random(-1, 1);
-
-
-        // }
-        // else if (randomNo == 1) { //flower comes in from the top of the screen
-
-        //     x = wv.random(halfW, wv.width - halfW);
-        //     y = - halfW;;
-        //     dx = wv.random(-1, 1);
-        //     dy = wv.random(1, 4);
-
-
-        // }
-        // else if (randomNo == 2) { //flower comes in from the right of the screen
-
-        //     x = wv.width + halfW;
-        //     y =  wv.random(halfW, wv.height - halfW);
-        //     dx =  wv.random(1, 4);
-        //     dy =  wv.random(-1, 1);
-
-        // }
-        // else { //flower comes in from the left of the screen
-
-        //     x = - halfW;
-        //     y = wv.random(halfW, wv.height - halfW);
-        //     dx = wv.random(1, 4);
-        //     dy = wv.random(-1, 1);
-
-        // }
-
-    //}
+    }
 
     public void render() { // drawing the flower
 
@@ -125,7 +52,7 @@ public class Flowers {
         for(int i = 0; i < petalNo; i++) {
 
             wv.rotate(PApplet.TWO_PI / petalNo);
-            wv.line(0, 0, 50 + wv.lerpedAverage * (10 * flowerSize), 0);
+            wv.line(0, 0, y, 25 + wv.lerpedAverage * (10 * flowerSize));
 
 
         }
@@ -135,34 +62,21 @@ public class Flowers {
         wv.ellipse(0, 0, (float) 1.5 * flowerSize, (float) 1.5 * flowerSize);
         wv.popMatrix();
 
-        // wv.pushMatrix();
-        // wv.translate(400, 400, -200);
-        // wv.rotateX(angle);
-        // wv.rotateY(angle);
-        // wv.noFill();
-        // wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        // wv.sphere(160 + (400 * wv.lerpedAverage));
-        // wv.popMatrix();
-        // angle += 0.03f;
-
     }
 
-    // void updatePosition() {
+    void updatePosition() {
 
-    //     x += dx;
-    //     y += dy;
-    //     rotation += 0.05f;
+        x += dy;
+        y += dx;
+        rotation += 0.05f;
 
-    //     if(x < - halfW || x > wv.width + halfW || y < -halfW || y > wv.height + halfW) {
+        if( x > wv.width / 4 || y > wv.height / 4) {
 
-    //         moveFlower();
+            moveFlower();
 
-    //     }
+        }
      
-
-    // }
-
-    
+    }
 
     
 }
