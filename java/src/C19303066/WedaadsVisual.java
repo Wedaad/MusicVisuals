@@ -9,7 +9,7 @@ public class WedaadsVisual extends Visual {
     Flowers flowers;
     Circle circle;
     Sphere sphere;
-    SprialSphere ssphere;
+    SpiralSphere ssphere;
     SplitVisual sVisual;
 
     public void settings()
@@ -41,7 +41,7 @@ public class WedaadsVisual extends Visual {
         flowers = new Flowers(this);
         circle = new Circle(this);
         sphere = new Sphere(this);
-        ssphere = new SprialSphere(this);
+        ssphere = new SpiralSphere(this);
         sVisual = new SplitVisual(this);
         
         lerpedBuffer = new float[width];
@@ -73,12 +73,12 @@ public class WedaadsVisual extends Visual {
         float average = 0;
 
         //calculating the average of the buffer
-        for (int i = 0; i < ab.size(); i ++)
+        for (int i = 0; i < getAudioBuffer().size(); i ++)
         {
-            sum += abs(ab.get(i));
+            sum += abs(getAudioBuffer().get(i));
         }
 
-        average = sum / ab.size();
+        average = sum / getAudioBuffer().size();
 
         lerpedAverage = lerp(lerpedAverage, average, 0.1f);
 

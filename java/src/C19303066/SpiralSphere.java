@@ -1,11 +1,11 @@
 package C19303066;
 import processing.core.*;
 
-public class SprialSphere {
+public class SpiralSphere {
     
     WedaadsVisual wv;
 
-    public SprialSphere(WedaadsVisual wv) {
+    public SpiralSphere(WedaadsVisual wv) {
         this.wv = wv;
     }
 
