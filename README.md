@@ -5,17 +5,23 @@ Name: Wedaad Haruna
 Student Number: C19303066
 
 ## Instructions
-- Fork this repository and use it a starter project for your assignment
-- Create a new package named your student number and put all your code in this package.
-- You should start by creating a subclass of ie.tudublin.Visual
-- There is an example visualiser called MyVisual in the example package
-- Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
+- Press the space bar - once pressed the song BadLiar starts playing and the visual starts to move according to the music
+- To change the visual on the screen use the number keys from 0 - 5 (inclusive) which calls the different visual classes within a switch case in WedaadVisual.java
+- When no key is pressed at the beginning you will see a flower
+- when key 1 is pressed two circles are rendered to the screen
+- When key 2 is press two circles and a sphere are rendered to the screen
+- When keys 3 - 5 are pressed different visuals are rendered to the screen
+- Press the space bar again to start song from the beginning
+- Enjoy! 
 
 # Description of the assignment
 
 # Instructions
 
 # How it works
+1. Press the space bar to start playing the song with the viusal. The visual works best with BadLiar.mp3
+2. The main method calls on WedaadsVisual
+3. Run the main method
 
 # What I am most proud of in the assignment
 
