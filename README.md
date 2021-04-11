@@ -15,10 +15,13 @@ Student Number: C19303066
 - Enjoy! 
 
 # Description of the assignment
+My assignment was inspired by stereos. I made different classes for each visual and I made instances of all of these classes in the WedaadVisual class. Using polymorphism allowed me to reuse attributes and methods of WedaadsVisual in the other classes as well as call methods from the other visual classes in WedaadsVisual.java.  
 
-# Instructions
+Since the song starts of slow I use the flower
 
 # How it works
+You will find my visual on the master branch. While developing the assignment I made two branches one called WIP and MyVisual I merged the WIP branch with the master branch once I was happy with my visual. I backed up the code with the visual on the MyVisual branch.
+
 1. Press the space bar to start playing the song with the viusal. The visual works best with BadLiar.mp3
 2. The main method calls on WedaadsVisual
 3. Run the main method
