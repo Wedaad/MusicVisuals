@@ -20,7 +20,7 @@ public class Sphere {
         wv.strokeWeight(1);
         float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
         wv.fill(c, 255, 255);
-        wv.sphere(160 + (400 * wv.lerpedAverage));
+        wv.sphere(160 + (300 * wv.lerpedAverage));
     }
 
 }

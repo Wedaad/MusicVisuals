@@ -11,6 +11,7 @@ public class WedaadsVisual extends Visual {
     Sphere sphere;
     SpiralSphere ssphere;
     SplitVisual sVisual;
+    TwoCircles tCircles;
 
     public void settings()
     {
@@ -32,9 +33,10 @@ public class WedaadsVisual extends Visual {
         startMinim();
         colorMode(HSB);
         // Call loadAudio to load an audio file to process 
-        loadAudio("BadLiar.mp3");
+        //loadAudio("BadLiar.mp3");
+        loadAudio("TheBeach.mp3");
+        noCursor();
  
-
         // Call this instead to read audio from the microphone
         //startListening(); 
         
@@ -43,6 +45,7 @@ public class WedaadsVisual extends Visual {
         sphere = new Sphere(this);
         ssphere = new SpiralSphere(this);
         sVisual = new SplitVisual(this);
+        tCircles = new TwoCircles(this);
         
         lerpedBuffer = new float[width];
 
@@ -103,19 +106,21 @@ public class WedaadsVisual extends Visual {
             case 0: { //flowers
 
                 flowers.render();
-                //flowers.moveFlower();
                 flowers.updatePosition();
                 break;
             }//ends case 0
 
             case 1: {
 
+                flowers.render();
+                flowers.updatePosition();
                 circle.render();
                 break;
             }//ends case 1 
 
             case 2: {
 
+                tCircles.render();
                 sphere.render();
                 break;
 
@@ -123,15 +128,14 @@ public class WedaadsVisual extends Visual {
 
             case 3: { 
                 
-                circle.render();
-                sphere.render();
+                tCircles.render();
+                ssphere.render();
                 break;
             }
 
             case 4: {
 
-                circle.render();
-                ssphere.render();
+                sphere.render();
                 break;
             }
             

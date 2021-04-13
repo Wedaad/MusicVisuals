@@ -70,7 +70,7 @@ public class Flowers {
         y += dx;
         rotation += 0.05f;
 
-        if( x > wv.width / 4 || y > wv.height / 4) {
+        if( x > wv.width / 16 || y > wv.height / 16) {
 
             moveFlower();
 
