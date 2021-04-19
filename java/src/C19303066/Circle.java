@@ -14,7 +14,7 @@ public class Circle {
     public void render() { // drawing the circle
     
 
-        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
+        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 100, 255);
         wv.stroke(c, 255, 255);        
         wv.strokeWeight(5);
         wv.noFill();

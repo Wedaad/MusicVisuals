@@ -42,7 +42,7 @@ public class Flowers {
         wv.pushMatrix();
         wv.background(0);
         wv.calculateAverageAmplitude();
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 200, 255), 255, 255);
         wv.strokeWeight(flowerSize);
         wv.noFill();
         wv.translate(400, 400, 0);

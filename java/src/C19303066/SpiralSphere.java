@@ -18,9 +18,9 @@ public class SpiralSphere {
         wv.rotateX(angle);
         wv.rotateY(angle);
         wv.noFill();
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 100, 255), 255, 255);
         wv.strokeWeight(1);
-        wv.sphere(160 + (400 * wv.lerpedAverage));
+        wv.sphere(160 + (1000 * wv.lerpedAverage));
         wv.popMatrix();
         angle += 0.03f;
 

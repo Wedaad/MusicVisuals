@@ -16,11 +16,11 @@ public class Sphere {
 
         wv.lights();
         wv.translate(400, 400, -200);
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 220, 255), 255, 255);
         wv.strokeWeight(1);
-        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
+        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 220, 255);
         wv.fill(c, 255, 255);
-        wv.sphere(160 + (300 * wv.lerpedAverage));
+        wv.sphere(160 + (350 * wv.lerpedAverage));
     }
 
 }

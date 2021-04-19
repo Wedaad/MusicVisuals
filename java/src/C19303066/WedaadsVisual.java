@@ -33,8 +33,7 @@ public class WedaadsVisual extends Visual {
         startMinim();
         colorMode(HSB);
         // Call loadAudio to load an audio file to process 
-        //loadAudio("BadLiar.mp3");
-        loadAudio("TheBeach.mp3");
+        loadAudio("Already.mp3");
         noCursor();
  
         // Call this instead to read audio from the microphone

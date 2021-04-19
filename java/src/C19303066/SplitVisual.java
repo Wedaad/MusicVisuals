@@ -13,7 +13,7 @@ public class SplitVisual {
 
     public void render() {
 
-        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255);
+        float c = PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 90, 255);
         wv.stroke(c, 255, 255);        
         wv.noFill();
         wv.strokeWeight(3);
@@ -31,7 +31,7 @@ public class SplitVisual {
         wv.rotateY(angle);
         wv.noFill();
         wv.strokeWeight(1);
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 90, 255), 255, 255);
         wv.sphere(25 + (200 * wv.lerpedAverage));
         wv.popMatrix();
         angle += 0.03f;
@@ -42,7 +42,7 @@ public class SplitVisual {
         wv.rotateY(angle);
         wv.noFill();
         wv.strokeWeight(1);
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 90, 255), 255, 255);
         wv.sphere(25 + (200 * wv.lerpedAverage));
         wv.popMatrix();
         angle += 0.03f;
