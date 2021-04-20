@@ -1,4 +1,5 @@
 package C19303066;
+
 import processing.core.*;
 
 
@@ -19,7 +20,6 @@ public class Flowers {
     float angle = 0;
     float rotation;
 
-    //trying to move the flower around
     float x = 0;
     float y = 0;
     float dx = 0;
@@ -42,7 +42,7 @@ public class Flowers {
         wv.pushMatrix();
         wv.background(0);
         wv.calculateAverageAmplitude();
-        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        wv.stroke(PApplet.map(wv.getSmoothedAmplitude(), 0, 1, 200, 255), 255, 255);
         wv.strokeWeight(flowerSize);
         wv.noFill();
         wv.translate(400, 400, 0);
@@ -70,7 +70,7 @@ public class Flowers {
         y += dx;
         rotation += 0.05f;
 
-        if( x > wv.width / 4 || y > wv.height / 4) {
+        if( x > wv.width / 16 || y > wv.height / 16) {
 
             moveFlower();
 
