@@ -181,19 +181,19 @@ This code renders the flower to the screen:
 ## Images 
 
 - The flower:
-![flower](images/flower.jpg)
+![flower](images/flower.png)
 
 - The flower surrounded by circles:
-![key1](images/key1.jpg)
+![key1](images/key1.png)
 
 - The sphere surrounded by circles:
-![key2](images/key2.jpg)
+![key2](images/key2.png)
 
 - Entering inside the spiral sphere to feel the music:
-![key4](images/key4.jpg)
+![key4](images/key4.png)
 
 - The two stereos: 
-![key5](images/key5.jpg)
+![key5](images/key5.png)
 
 ---
 
