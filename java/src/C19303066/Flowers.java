@@ -19,7 +19,6 @@ public class Flowers {
     float angle = 0;
     float rotation;
 
-    //trying to move the flower around
     float x = 0;
     float y = 0;
     float dx = 0;

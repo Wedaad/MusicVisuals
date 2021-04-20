@@ -100,7 +100,7 @@ public class WedaadsVisual extends Visual {
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();        
         
-        switch (visualNo) { //REMOVE BREAK OR REMOVE SWITCH ALL TOGETHER - IF KEY BLAH BLAH
+        switch (visualNo) { 
 
             case 0: { //flowers
 
