@@ -24,12 +24,12 @@ I created a stereo system but with a twist. I wanted a stereo system that is ver
 - when key 1 is pressed two circles along with a flower are rendered to the screen
 - When key 2 is press two circles and a sphere are rendered to the screen
 - When keys 3 - 5 are pressed different visuals are rendered to the screen
-- Press the space bar again to start song from the beginning
 
 1. Press the space bar to start playing the song with the viusal. The visual works best with Already.mp3
 2. The main method calls on WedaadsVisual
 3. Run the main method
-- Enjoy! 
+
+Enjoy! 
 
 ---
 
