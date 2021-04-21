@@ -180,8 +180,7 @@ This code renders the flower to the screen:
 
 ## Images 
 
-- The flower:
-![flower](images/flower.jpg)
+- The flower: ![flower](images/flower.jpg)
 
 - The flower surrounded by circles:
 ![key1](images/key1.jpg)
