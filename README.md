@@ -34,7 +34,6 @@ Enjoy!
 ---
 
 # How it works
-
 I made different classes for each visual and I made instances of all of these classes in the WedaadVisual class. Using polymorphism allowed me to reuse attributes and methods of WedaadsVisual in the other classes as well as call methods from the other visual classes in WedaadsVisual.java. The WedaadsVisual class uses inheritance as it extends  the Visual class:
 
 ```Java
@@ -119,7 +118,6 @@ You will find my visual on the master branch. While developing my assignment I m
 ---
 
 # What I am most proud of in the assignment
-
 I am very proud that I was able to render a flower to the screen. At the beginning the flower wasnt able to move or rotate. After a couple of tries I wrote a `updatePosition()` method and a `moveFolwer()` method in the flower class. The `updatePosition()` is called in the `draw()` method when the flower is rendered to the screen. These methods allowed me to increase the size of the flower petals as well as restric how long the petals can get. The colour and the size of the flower changes when the amplitude of the songs increases. As the flower rotates and the petals increase in size it gives it a spinning effect which I really like. 
 
 This code restricts the length of the petals:
@@ -203,7 +201,6 @@ This code renders the flower to the screen:
 ---
 
 ## YouTube Video
-
 Here is the link to my YouTube video: 
 [Colourful Stereo System - with Java Processing](https://www.youtube.com/watch?v=oYhgAi9EUXU)
 
