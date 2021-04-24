@@ -205,7 +205,7 @@ This code renders the flower to the screen:
 ## YouTube Video
 
 Here is the link to my YouTube video: 
-[YouTube](https://www.youtube.com/watch?v=oYhgAi9EUXU)
+[Colourful Stereo System - with Java Processing](https://www.youtube.com/watch?v=oYhgAi9EUXU)
 
 
 
